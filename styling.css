@@ -341,7 +341,7 @@ a:hover{
 }
 
 main{
-    background-color: yellow;
+    background-color: rgb(255, 255, 255);
 }
 .teaminfo{
     display: flex;

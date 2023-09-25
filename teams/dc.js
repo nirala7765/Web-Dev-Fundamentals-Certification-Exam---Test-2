@@ -1,10 +1,6 @@
-function redirectToPlayersPage() {
-    window.location.href = 'player info.html';
-}
 
-function redirectTocskhtml() {
-    window.location.href = 'Delhi.html';
-}
+
+
 
 const players = [
     {
@@ -14,7 +10,7 @@ const players = [
         "price": "10.75 Cr",
         "isPlaying": true,
         "description": "Batsman",
-        "Image": "<img src='https://m.cricbuzz.com/a/img/v1/192x192/i1/c170660/shikhar-dhawan.jpg'></img>"
+        "Image": "https://m.cricbuzz.com/a/img/v1/192x192/i1/c170660/shikhar-dhawan.jpg"
     },
     {
         "id": 2,

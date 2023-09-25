@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>cskTeam</title>
     <link rel="stylesheet" href="styling.css">
     <link rel="stylesheet" href="TeamDetails.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="header">
         <header class="headerItem">
@@ -46,7 +50,7 @@
                 </div>
                 <div class="captain">
                     <h2 id="captain">Captain - </h2>
-                    <h2 id="CaptainName">K.L Rahul</h2>
+                    <h2 id="CaptainName">Kl Rahul</h2>
                 </div>
 
                 <div class="numberofPlayer">
@@ -56,47 +60,57 @@
 
                 </div>
                 <div class="TrophiesWon">
-                    <img  id="trophieswon" src="/teamOutline/trophyOutline.png" alt="">
+                    <img id="trophieswon" src="/teamOutline/trophyOutline.png" alt="">
                     <h2 id="trophyCount"> - 0</h2>
 
                 </div>
 
 
-               
+
             </div>
 
 
             <div class="playerarea">
-                <h1> <u>Players</u></h1>
+                
+                <button id="loadPlayerbtn" onclick="showPlayerInfo()">Load Players</button>
+                
 
-                <div class="topBatsman">
-    
-                    <div id="playerCard" class="playercard">
-                        <img id="playerImage" src="https://images.news18.com/ibnlive/uploads/2021/10/ms-dhoni-1-1.jpg" alt="">
-                        <h2 id="PlayerName">Ms.Dhoni</h2>
-                        <h2 id="PlayerAge">32</h2>
-                        <h2 id="description">Batsman</h2>
-                        <h2 id="playingStatus">Playing</h2>
-                    </div>
 
-                   
-                    
-    
-    
-    
-    
+
+
+
+
+
+            </div>
+
+
+            <div class="playerWrapper">
+                
+
+                    <ul id="playerList">
+                        
+                    </ul>
+
                   
-                   
     
-                </div>
+               
+                
+
+
+
+
+              
+               
 
                 
 
-           
-        </div>
+            </div>
+
+            
     </main>
 
-    <script src="teaminfo/teaminfo.js"></script>
-    <script src="playerinfo.js"></script>
+
+    <script src="/teams/lsg.js"></script>
 </body>
+
 </html>

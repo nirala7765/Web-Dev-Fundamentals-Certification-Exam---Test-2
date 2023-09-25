@@ -3,6 +3,50 @@ function redirectToCskPage() {
     window.location.href = 'csk.html';
 }
 
+function redirectTodcPage() {
+    window.location.href = 'dc.html';
+}
+
+
+
+function redirectTomihtml() {
+    window.location.href = 'mi.html';
+}
+
+
+function redirectTogthtml() {
+    window.location.href = 'gt.html';
+}
+
+function redirectTolsghtml() {
+    window.location.href = 'lsg.html';
+}
+
+
+
+function redirectTopkhtml() {
+    window.location.href = 'pk.html';
+}
+
+function redirectTorcbhtml() {
+    window.location.href = 'rcb.html';
+}
+
+function redirectTokkrhtml() {
+    window.location.href = 'kkr.html';
+}
+
+function redirectTosrhhtml() {
+    window.location.href = 'srh.html';
+}
+function redirectTorrhtml() {
+    window.location.href = 'rr.html';
+}
+
+
+
+
+
 const TeamsInfo =[
     {   id:1,
         name:"Chennai Super kings",

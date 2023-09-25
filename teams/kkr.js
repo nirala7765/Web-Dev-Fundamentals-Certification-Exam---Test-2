@@ -1,10 +1,5 @@
-function redirectToPlayersPage() {
-    window.location.href = 'player info.html';
-}
 
-function redirectTocskhtml() {
-    window.location.href = 'Kolkata.html';
-}
+
 
 const players = [
     {
@@ -14,7 +9,7 @@ const players = [
         "price": "1.8 Cr",
         "isPlaying": true,
         "description": "Batsman",
-        "Image": "<img src='https://img1.hscicdn.com/image/upload/f_auto/lsci/db/PICTURES/CMS/352800/352812.6.jpg'></img>"
+        "Image": "https://img1.hscicdn.com/image/upload/f_auto/lsci/db/PICTURES/CMS/352800/352812.6.jpg"
     },
     {
         "id": 2,
@@ -23,7 +18,7 @@ const players = [
         "price": "8.5 Cr",
         "isPlaying": true,
         "description": "All-rounder",
-        "Image": "<img src='https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/141.png'></img>"
+        "Image": "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/141.png"
     },
     {
         "id": 3,
@@ -32,7 +27,7 @@ const players = [
         "price": "5.25 Cr",
         "isPlaying": true,
         "description": "Batsman",
-        "Image": "<img src='https://st.adda247.com/https://wpassets.adda247.com/wp-content/uploads/multisite/sites/5/2023/02/14130318/skysports-eoin-morgan-england_5816039.jpg'></img>"
+        "Image": "https://st.adda247.com/https://wpassets.adda247.com/wp-content/uploads/multisite/sites/5/2023/02/14130318/skysports-eoin-morgan-england_5816039.jpg"
     },
     {
         "id": 4,
@@ -41,7 +36,7 @@ const players = [
         "price": "8.5 Cr",
         "isPlaying": true,
         "description": "All-rounder",
-        "Image": "<img src='https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320,q_50/lsci/db/PICTURES/CMS/320100/320119.png'></img>"
+        "Image": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320,q_50/lsci/db/PICTURES/CMS/320100/320119.png"
     },
     {
         "id": 5,
@@ -50,7 +45,7 @@ const players = [
         "price": "15.5 Cr",
         "isPlaying": true,
         "description": "Bowler",
-        "Image": "<img src='https://cricfit.com/wp-content/uploads/2023/06/2292.jpg'></img>"
+        "Image": "https://cricfit.com/wp-content/uploads/2023/06/2292.jpg"
     },
     {
         "id": 6,
@@ -59,7 +54,7 @@ const players = [
         "price": "4 Cr",
         "isPlaying": true,
         "description": "Bowler",
-        "Image": "<img src='https://www.kreedon.com/wp-content/uploads/2021/07/1600x960_1007392-varun-chakravarthy.jpg'></img>"
+        "Image": "https://www.kreedon.com/wp-content/uploads/2021/07/1600x960_1007392-varun-chakravarthy.jpg"
     },
     {
         "id": 7,
@@ -68,7 +63,7 @@ const players = [
         "price": "3.4 Cr",
         "isPlaying": true,
         "description": "All-rounder",
-        "Image": "<img src='https://kheltalk.com/wp-content/uploads/2023/05/Nitish-Rana-1.jpg'></img>"
+        "Image": "https://kheltalk.com/wp-content/uploads/2023/05/Nitish-Rana-1.jpg"
     },
     {
         "id": 8,
@@ -77,7 +72,7 @@ const players = [
         "price": "7.4 Cr",
         "isPlaying": true,
         "description": "Wicketkeeper-Batsman",
-        "Image": "<img src='https://staticg.sportskeeda.com/editor/2023/02/c7925-16762831581149-1920.jpg'></img>"
+        "Image": "https://staticg.sportskeeda.com/editor/2023/02/c7925-16762831581149-1920.jpg"
     },
     {
         "id": 9,
@@ -95,7 +90,7 @@ const players = [
         "price": "3.2 Cr",
         "isPlaying": true,
         "description": "Bowler",
-        "Image": "<img src='https://starsunfolded.com/wp-content/uploads/2018/01/Kamlesh-Nagarkoti.jpg'></img>"
+        "Image": "https://starsunfolded.com/wp-content/uploads/2018/01/Kamlesh-Nagarkoti.jpg"
     },
     {
         "id": 11,
@@ -104,7 +99,7 @@ const players = [
         "price": "1.6 Cr",
         "isPlaying": true,
         "description": "Bowler",
-        "Image": "<img src='https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320,q_50/lsci/db/PICTURES/CMS/321200/321239.png'></img>"
+        "Image": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320,q_50/lsci/db/PICTURES/CMS/321200/321239.png"
     },
     {
         "id": 12,
@@ -113,35 +108,44 @@ const players = [
         "price": "3.6 Cr",
         "isPlaying": true,
         "description": "Bowler",
-        "Image": "<img src='https://pbs.twimg.com/profile_images/1493970538875670533/VYoaS6zi_400x400.jpg'></img>"
+        "Image": "https://pbs.twimg.com/profile_images/1493970538875670533/VYoaS6zi_400x400.jpg"
     }
 ]
 
 
-let currentPlayerIndex = 0;
 
-function showPlayerInfo() {
-    const player = players[currentPlayerIndex];
-    const playerInfoElement = document.getElementById('playerInfo');
+document.getElementById('loadPlayerbtn').addEventListener('click', function () {
+    const playerList = document.getElementById('playerList');
+    playerList.innerHTML = '';
 
-    if (player) {
-        playerInfoElement.innerHTML = `
-            <h2>${player.playerName}</h2>
-            <p>Team: ${player.from}</p>
-            <p>Price: ${player.price}</p>
-            <p>Playing: ${player.isPlaying ? 'Yes' : 'No'}</p>
-            <p> ${player.description}</p>
-            <p> ${player.Image}</p>
+    players.forEach(player => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+
+
+                <div style="display:flex; flex-direction: row; flex-wrap:wrap; gap:15px;">
+
+                    <div style = "width:350px; height:300px; border: 2px solid black; display:flex; flex-direction: column; gap: 10px;  flex-wrap:wrap; border-radius:10px;" >
+
+                        <img src="${player.Image}" alt="${player.playerName}" style = " width:150px; height:150px; border: none; border-radius: 100px; margin-left:90px; margin-top:10px;" >
+                        <h2 style = "color: black; text-align:center; font-size:20px;">${player.playerName}</h2>
+                        <p style = "color: black; text-align:center; font-size:20px;">Team: ${player.from}</p>
+                        <p style = "color: black;  text-align:center;font-size:20px;">Price: ${player.price || 'N/A'}</p>
+                        <p style = "color: black;  text-align:center;font-size:20px;">Description: ${player.description}</p>
+
+                    </div>
+                </div>
+
+
+
+           
+
+            
+
+
+           
+            
         `;
-    } else {
-        playerInfoElement.innerHTML = '<h2>No more players in this team<br>Please Click Back To Page</h2>';
-    }
-
-    currentPlayerIndex++;
-}
-
-function showNextPlayer() {
-    const playerInfoElement = document.getElementById('playerInfo');
-    playerInfoElement.innerHTML = '';
-    showPlayerInfo();
-}
+        playerList.appendChild(listItem);
+    });
+});

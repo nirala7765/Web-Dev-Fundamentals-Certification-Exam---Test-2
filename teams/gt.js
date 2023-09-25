@@ -1,10 +1,4 @@
-function redirectToPlayersPage() {
-    window.location.href = 'player info.html';
-}
 
-function redirectTocskhtml() {
-    window.location.href = 'Gt.html';
-}
 
 const players = [
     {
@@ -14,7 +8,7 @@ const players = [
         "price": "8 Cr",
         "isPlaying": true,
         "description": "Batsman",
-        "Image": "<img src='https://i.guim.co.uk/img/media/23e5fbe2828f475a5b7854c4ac64803f9c327155/0_5_2768_1662/master/2768.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=181b09e0c2e5206dc4916784360ddd25'></img>"
+        "Image": "https://i.guim.co.uk/img/media/23e5fbe2828f475a5b7854c4ac64803f9c327155/0_5_2768_1662/master/2768.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=181b09e0c2e5206dc4916784360ddd25"
     },
     {
         "id": 2,
@@ -118,30 +112,39 @@ const players = [
 ]
 
 
-let currentPlayerIndex = 0;
 
-function showPlayerInfo() {
-    const player = players[currentPlayerIndex];
-    const playerInfoElement = document.getElementById('playerInfo');
+document.getElementById('loadPlayerbtn').addEventListener('click', function () {
+    const playerList = document.getElementById('playerList');
+    playerList.innerHTML = '';
 
-    if (player) {
-        playerInfoElement.innerHTML = `
-            <h2>${player.playerName}</h2>
-            <p>Team: ${player.from}</p>
-            <p>Price: ${player.price}</p>
-            <p>Playing: ${player.isPlaying ? 'Yes' : 'No'}</p>
-            <p> ${player.description}</p>
-            <p> ${player.Image}</p>
+    players.forEach(player => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+
+
+                <div style="display:flex; flex-direction: row; flex-wrap:wrap; gap:15px;">
+
+                    <div style = "width:350px; height:300px; border: 2px solid black; display:flex; flex-direction: column; gap: 10px;  flex-wrap:wrap; border-radius:10px;" >
+
+                        <img src="${player.Image}" alt="${player.playerName}" style = " width:150px; height:150px; border: none; border-radius: 100px; margin-left:90px; margin-top:10px;" >
+                        <h2 style = "color: black; text-align:center; font-size:20px;">${player.playerName}</h2>
+                        <p style = "color: black; text-align:center; font-size:20px;">Team: ${player.from}</p>
+                        <p style = "color: black;  text-align:center;font-size:20px;">Price: ${player.price || 'N/A'}</p>
+                        <p style = "color: black;  text-align:center;font-size:20px;">Description: ${player.description}</p>
+
+                    </div>
+                </div>
+
+
+
+           
+
+            
+
+
+           
+            
         `;
-    } else {
-        playerInfoElement.innerHTML = '<h2>No more players in this team<br>Please Click Back To Page</h2>';
-    }
-
-    currentPlayerIndex++;
-}
-
-function showNextPlayer() {
-    const playerInfoElement = document.getElementById('playerInfo');
-    playerInfoElement.innerHTML = '';
-    showPlayerInfo();
-}
+        playerList.appendChild(listItem);
+    });
+});
