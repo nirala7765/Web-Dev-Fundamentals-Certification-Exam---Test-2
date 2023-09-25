@@ -566,7 +566,7 @@ main{
 
 .playerarea{
     margin-top: 10px;
-    margin-left: 560px;
+    
     
 }
 
@@ -578,4 +578,26 @@ main{
 
 }
 
+
+#playerInfo{
+   
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black ;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.playerWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid black ;
+
+}
+
+#playerList{
+    width: 100%;
+   
+}
 
