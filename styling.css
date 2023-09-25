@@ -553,7 +553,8 @@ main{
     height: 35px;
     background-color: #19398a;
     color: white;
-    margin-left: 50px;
+    margin-left: 550px;
+    margin-top: 150px;
     
     margin-bottom: 10px;
     font-size: 20px;
@@ -588,16 +589,26 @@ main{
     gap: 10px;
 }
 
-.playerWrapper{
+/* .playerWrapper{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     border: 1px solid black ;
 
-}
+} */
 
 #playerList{
     width: 100%;
    
 }
 
+ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    margin-left: 150px;
+}
+
+.TrophiesWon{margin-top: 30px;}

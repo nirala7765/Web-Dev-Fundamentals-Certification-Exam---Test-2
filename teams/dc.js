@@ -118,30 +118,38 @@ const players = [
 ]
 
 
-let currentPlayerIndex = 0;
+document.getElementById('loadPlayerbtn').addEventListener('click', function () {
+    const playerList = document.getElementById('playerList');
+    playerList.innerHTML = '';
 
-function showPlayerInfo() {
-    const player = players[currentPlayerIndex];
-    const playerInfoElement = document.getElementById('playerInfo');
+    players.forEach(player => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
 
-    if (player) {
-        playerInfoElement.innerHTML = `
-            <h2>${player.playerName}</h2>
-            <p>Team: ${player.from}</p>
-            <p>Price: ${player.price}</p>
-            <p>Playing: ${player.isPlaying ? 'Yes' : 'No'}</p>
-            <p> ${player.description}</p>
-            <p> ${player.Image}</p>
+
+                <div style="display:flex; flex-direction: row; flex-wrap:wrap; gap:15px;">
+
+                    <div style = "width:350px; height:300px; border: 2px solid black; display:flex; flex-direction: column; gap: 10px;  flex-wrap:wrap; border-radius:10px;" >
+
+                        <img src="${player.Image}" alt="${player.playerName}" style = " width:150px; height:150px; border: none; border-radius: 100px; margin-left:90px; margin-top:10px;" >
+                        <h2 style = "color: black; text-align:center; font-size:20px;">${player.playerName}</h2>
+                        <p style = "color: black; text-align:center; font-size:20px;">Team: ${player.from}</p>
+                        <p style = "color: black;  text-align:center;font-size:20px;">Price: ${player.price || 'N/A'}</p>
+                        <p style = "color: black;  text-align:center;font-size:20px;">Description: ${player.description}</p>
+
+                    </div>
+                </div>
+
+
+
+           
+
+            
+
+
+           
+            
         `;
-    } else {
-        playerInfoElement.innerHTML = '<h2>No more players in this team<br>Please Click Back To Page</h2>';
-    }
-
-    currentPlayerIndex++;
-}
-
-function showNextPlayer() {
-    const playerInfoElement = document.getElementById('playerInfo');
-    playerInfoElement.innerHTML = '';
-    showPlayerInfo();
-}
+        playerList.appendChild(listItem);
+    });
+});
