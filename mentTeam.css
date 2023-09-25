@@ -135,6 +135,20 @@
 }  
 .newteam:hover{
     background-color: green;
-}  
+} 
+
+#csktext{
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.imagescaps{
+    display: flex ;
+    flex-direction: row;
+    
+}
+
    
  

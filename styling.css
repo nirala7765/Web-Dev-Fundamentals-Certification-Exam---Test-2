@@ -60,9 +60,15 @@ a:hover{
 .someButtons{
     display: flex;
     margin-top: 36px;
-    gap: 30px;
+    gap: 10px;
     margin-left: 200px;
-    cursor: pointer;
+}
+.NavBtn{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+   
+
 }
 .CurrentYeartChampians{
     width: 100%;
@@ -215,4 +221,361 @@ a:hover{
 
 
 }
+
+
+
+.ourNumbers{
+    display: flex;
+    flex-direction: column;
+    background-color: #19398a
+}
+
+
+.headingnum h1{
+    color:white;
+   margin-left: 100px;
+}
+
+.numbersContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 600px;
+   
+}
+.Istrow{
+
+    display: flex;
+    flex-direction: row;
+    margin: 10px auto;
+}
+
+.boundryNubers{
+    height: 250px;
+    width :300px;
+    background-color: rgb(162, 119, 209);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    border-radius: 15px;
+
+}
+#rupaylogo{
+    margin-top: 20px;
+    /* margin-left: 70px; */
+    align-self: center;
+
+}
+.boundryNubers h2{
+   
+    text-align: center;
+    color: white;
+    font-size: 35px;
+
+}
+.boundryNubers h1{
+   
+    text-align: center;
+    color: white;
+    
+
+}
+.NumberofChampions{
+    width: 600px;
+    height:250px;
+    margin-left: 15px;
+    background-color: green;
+    align-items: center;
+    align-content: center;
+    border-radius: 15px;
+
+}
+#championlogo{
+    align-items: center;
+    margin-top: 15px;
+ 
+
+}
+.NumberofChampions h2{
+    color: white;
+    text-align: center;
+    font-size: 35px;
+}
+.NumberofChampions{
+    color: white;
+    text-align: center;
+    
+}
+
+.maximum{
+    height: 250px;
+    width :300px;
+    background-color: rgb(226, 174, 224);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 15px;
+
+    border-radius: 15px;
+}
+.maximum h2{
+    color: white;
+    text-align: center;
+    font-size: 35px;
+}
+
+.maximum h1{
+    color: white;
+    text-align: center;
+    
+}
+#saudiimg{
+    align-self: center;
+}
+
+.IIndRow{
+    display: flex;
+    flex-direction: row;
+    margin: 10px auto;
+}
+
+main{
+    background-color: yellow;
+}
+.teaminfo{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:fit-content;
+    
+
+}
+
+.Teamlogo{
+    align-content: center;
+    align-self: center;
+    margin-top: 10px;
+}
+
+#teamlogoimg{
+    width: 250px;
+    height: 250px;
+
+    
+}
+.teamName{
+   align-content: center;
+   align-self: center;
+}
+
+.numberofPlayer{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-content: center;
+    align-self: center;
+}
+#playercounttxt {
+    font-size: 25px;
+    
+}
+#playerNumber{
+    font-size: 25px;
+    
+    
+
+}
+
+.TrophiesWon{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-content: center;
+    align-self: center;
+}
+
+#trophieswon{
+    width: 80px;
+    height: 80px;
+
+}
+
+#trophyCount{
+    font-size: 45px;
+    margin-top: 15px;
+}
+.captain{
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-content: center;
+    align-self: center;
+
+
+
+}
+#playerImage{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-top: 10px;
+    
+}
+.playercard{
+    width: 150px;
+    height: fit-content;
+    border: 1px solid black;
+    border-radius: 10px;
+    
+   text-align: center;
+   margin : 10px;
+}
+ 
+
+.playerarea{
+
+    width: 90%;
+    height: fit-content;
+    margin: 100px auto;
+}
+
+.topBatsman{
+    display: flex ;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#searchbox{
+    width: 180px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#searchBtn{
+    width: 70px;
+    margin-right : 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+
+
+}
+#searchBtn:hover{
+    background-color: green;
+}
+
+
+.playerInformation{
+    height: 300px;
+    width: 350px;
+
+    
+   margin-left: 700px;
+    border: 1px solid black;
+    border-radius:10px;
+}
+
+.orangecap{
+   
+        width: 600px;
+        height:250px;
+        margin-left: 15px;
+        background-color: orange;
+        align-items: center;
+        align-content: center;
+        border-radius: 15px;
+        
+    
+   
+}
+
+#aramco{
+    margin-left: 190px;
+
+    
+
+}
+
+.playerimages{
+    display: flex ;
+    flex-direction: row;
+
+}
+
+.imagescaps{
+    display: flex;
+    flex-direction: row;
+ 
+
+}
+
+.capcontainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.puplecap{
+   
+    width: 600px;
+    height:250px;
+    margin-left: 15px;
+    background-color: purple;
+    align-items: center;
+    align-content: center;
+    border-radius: 15px;
+    
+
+
+}
+
+
+.playerimage{
+    height: 200px;
+    width: 150px;
+    border: 1px solid black;
+}
+.playercard{
+    height: 300px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black ;
+    border-radius: 10px;
+}
+
+#playerImage{
+   margin: 25px auto;
+
+}
+#loadPlayerbtn{
+    width: 150px;
+    height: 35px;
+    background-color: #19398a;
+    color: white;
+    margin-left: 50px;
+    
+    margin-bottom: 10px;
+    font-size: 20px;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.playerarea{
+    margin-top: 10px;
+    margin-left: 560px;
+    
+}
+
+#loadPlayerbtn:hover{
+
+    background-color: green;
+
+    
+
+}
+
 
